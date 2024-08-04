@@ -33,9 +33,16 @@ export default function Home() {
         
         <button
           onClick={() => signIn("google")}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center mx-auto"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center mx-auto mb-4"
         >
           Sign in with Google
+        </button>
+        
+        <button
+          onClick={() => signIn()}
+          className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center mx-auto"
+        >
+          Sign in with Email
         </button>
         
         <p className="mt-6 text-sm text-gray-500">By signing in, you agree to our Terms of Service and Privacy Policy.</p>
