@@ -4,7 +4,6 @@ import { supabase } from '../../lib/supabase';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import { FiMail, FiLock, FiUser } from 'react-icons/fi';
-import { supabase } from '../../lib/supabase';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
