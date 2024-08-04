@@ -1,7 +1,6 @@
 const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
-const { Server } = require('socket.io');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -13,14 +12,6 @@ app.prepare().then(() => {
     handle(req, res, parsedUrl);
   });
 
-  const io = new Server(server);
-
-  io.on('connection', (socket) => {
-    console.log('A user connected');
-    socket.on('disconnect', () => {
-      console.log('User disconnected');
-    });
-  });
   const os = require('os');
 
   function getIPAddress() {
